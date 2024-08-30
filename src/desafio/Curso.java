@@ -2,10 +2,12 @@ package desafio;
 
 public class Curso {
     private String titulo;
-    private String descrição;
+    private String descricao;
     private int cargaHoraria;
 
-    
+    public Curso() {
+        
+    }
 
     public String getTitulo() {
         return titulo;
@@ -13,11 +15,11 @@ public class Curso {
     public void setTitulo(String titulo) {
         this.titulo = titulo;
     }
-    public String getDescrição() {
-        return descrição;
+    public String getDescricao() {
+        return descricao;
     }
-    public void setDescrição(String descrição) {
-        this.descrição = descrição;
+    public void setDescricao(String descricao) {
+        this.descricao = descricao;
     }
     public int getCargaHoraria() {
         return cargaHoraria;
@@ -25,6 +27,11 @@ public class Curso {
     public void setCargaHoraria(int cargaHoraria) {
         this.cargaHoraria = cargaHoraria;
     }
+    @Override
+    public String toString() {
+        return "Curso [titulo = " + titulo + ", descricao = " + descricao + ", cargaHoraria = " + cargaHoraria + "]";
+    }
 
+    
     
 }
