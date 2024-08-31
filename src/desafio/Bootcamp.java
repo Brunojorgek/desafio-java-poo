@@ -11,15 +11,21 @@ public class Bootcamp {
     private String descrição;
     private final LocalDate dataInicial = LocalDate.now();
     private final LocalDate dataFinal = dataInicial.plusDays(45);
-    private Set<Dev> devsInscrito = new HashSet<>();
+    private Set<Dev> devsInscritos = new HashSet<>();
     private Set<Conteudo> conteudos = new LinkedHashSet<>();
 
     //getters and setters
     public String getNome() {
         return nome;
     }
+    public void setNome(String nome) {
+        this.nome = nome;
+    }
     public String getDescrição() {
         return descrição;
+    }
+    public void setDescrição(String descrição) {
+        this.descrição = descrição;
     }
     public LocalDate getDataInicial() {
         return dataInicial;
@@ -28,11 +34,18 @@ public class Bootcamp {
         return dataFinal;
     }
     public Set<Dev> getDevsInscritos() {
-        return devsInscrito;
+        return devsInscritos;
+    }
+    public void setDevsInscrito(Set<Dev> devsInscrito) {
+        this.devsInscritos = devsInscrito;
     }
     public Set<Conteudo> getConteudos() {
         return conteudos;
     }
+    public void setConteudos(Set<Conteudo> conteudos) {
+        this.conteudos = conteudos;
+    }
+
 
     //equals and hashcode
     @Override
@@ -43,10 +56,11 @@ public class Bootcamp {
         result = prime * result + ((descrição == null) ? 0 : descrição.hashCode());
         result = prime * result + ((dataInicial == null) ? 0 : dataInicial.hashCode());
         result = prime * result + ((dataFinal == null) ? 0 : dataFinal.hashCode());
-        result = prime * result + ((devsInscrito == null) ? 0 : devsInscrito.hashCode());
+        result = prime * result + ((devsInscritos == null) ? 0 : devsInscritos.hashCode());
         result = prime * result + ((conteudos == null) ? 0 : conteudos.hashCode());
         return result;
     }
+
     @Override
     public boolean equals(Object obj) {
         if (this == obj)
@@ -76,10 +90,10 @@ public class Bootcamp {
                 return false;
         } else if (!dataFinal.equals(other.dataFinal))
             return false;
-        if (devsInscrito == null) {
-            if (other.devsInscrito != null)
+        if (devsInscritos == null) {
+            if (other.devsInscritos != null)
                 return false;
-        } else if (!devsInscrito.equals(other.devsInscrito))
+        } else if (!devsInscritos.equals(other.devsInscritos))
             return false;
         if (conteudos == null) {
             if (other.conteudos != null)
@@ -88,8 +102,5 @@ public class Bootcamp {
             return false;
         return true;
     }
-
-    
-
     
 }
