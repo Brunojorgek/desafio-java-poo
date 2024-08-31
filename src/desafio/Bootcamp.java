@@ -27,7 +27,7 @@ public class Bootcamp {
     public LocalDate getDataFinal() {
         return dataFinal;
     }
-    public Set<Dev> getDevsInscrito() {
+    public Set<Dev> getDevsInscritos() {
         return devsInscrito;
     }
     public Set<Conteudo> getConteudos() {
